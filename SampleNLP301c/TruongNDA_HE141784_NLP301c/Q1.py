@@ -47,3 +47,14 @@ for nltk_result in nltk_results:
 listToStrName = ' '.join([str(elem) for elem in a])
 for s in token_sentence:
     print(s)
+    
+import re
+
+def doubleConsonants(currStr):
+    vowelList = ['a','e','i','o','u'," "]
+    newStr = ""
+    consList = [subStr+subStr if re.match(r"[^\W\daeiou]",subStr) else subStr for subStr in currStr]
+    return newStr.join(consList)
+
+dStr = doubleConsonants(text2)
+print(dStr)
