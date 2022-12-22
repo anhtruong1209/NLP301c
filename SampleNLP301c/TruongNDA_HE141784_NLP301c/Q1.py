@@ -50,6 +50,7 @@ for s in token_sentence:
     
 import re
 
+# Q3
 def doubleConsonants(currStr):
     vowelList = ['a','e','i','o','u'," "]
     newStr = ""
